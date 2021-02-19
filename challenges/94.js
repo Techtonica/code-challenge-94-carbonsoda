@@ -17,9 +17,31 @@
 //
 // _Bonus: get it work if there are multiple valid pairs and return all the combinations as an array of arrays. (You'll have to write your own tests for this)_
 
-function find_indicies_to_sum(input_array, target){
-  // Add functionality here!
-  return
+function find_indicies_to_sum(input_array, target) {
+  if (input_array.length < 2) return [-1, -1];
+
+
+  // Tried to allow for multiple pairs
+  // But couldn't figure out how to filter duplicates
+  // let pairs = [];
+
+  for (let i = 0; i < input_array.length; i++) {
+    let num1 = input_array[i];
+
+    // the ideal matching
+    let num2 = target - num1;
+
+    for (let j = 0; j < input_array.length; j++) {
+      if (input_array[j] == num2 && i != j) {
+        // from multiple pair attempt
+        // pairs.push([i, j]); 
+        return [i, j];
+      }
+    }
+  }
+
+  // return pairs.length > 0 ? pairs: [-1, -1];
+  return [-1, -1];
 }
 
 
