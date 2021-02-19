@@ -8,6 +8,6 @@ describe("Challenge 94:", () => {
     expect(find_indicies_to_sum([10,20,30,40], 60)).toEqual([1, 3]);
   });
   it("find_indicies_to_sum([2, 3, 5, 1, 10, 8], 50) should return [-1, -1]", () => {
-    expect(find_indicies_to_sum([2, 3, 5, 1, 10, 8], 50))).toEqual([-1, -1]);
+    expect(find_indicies_to_sum([2, 3, 5, 1, 10, 8], 50)).toEqual([-1, -1]);
   });
 });
